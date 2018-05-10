@@ -69,5 +69,5 @@ app.post('/api/infos', function(req, res){
     }
     infos.push(newInfo);
 
-    res.json(req.body);
+    res.json(infos);
 });
