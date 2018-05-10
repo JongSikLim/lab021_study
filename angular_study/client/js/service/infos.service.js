@@ -24,7 +24,8 @@ angular.module('main')
             post: function(newName, newAge) {                                
                 var newInfo = {name:newName, age:newAge};
                 $http.post('/api/infos', newInfo).then(function success(res){
-                    console.log(res);
+                    console.log(res.data);
+                    
                 }, function error(err){
 
                 });
