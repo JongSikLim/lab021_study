@@ -23,7 +23,7 @@ app.get('/api/infos', function(req, res){
     res.json(infos.sort());
 });
 app.post('/api/infos', function(req, res){
-    console.log('get 통신중...');
+    console.log('post 통신중...');
     infos.push(req.body.num*1);
     res.json(infos.sort());
 });
