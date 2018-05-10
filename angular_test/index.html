@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="main2">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Document</title>
+</head>
+
+<body >
+    <h1>hi</h1>
+    <div class="server" ng-controller="mainController">
+        <li ng-repeat="info in infos track by $index" ng-click="delete(info)">
+            {{info}}
+        </li>
+        <form ng-submit="post(newData)">
+            <input type="text" ng-model="newData">
+            <button type="submit">submit</button>  
+        </form>
+    </div>
+</body>
+
+</html>

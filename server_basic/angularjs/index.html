@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./node_modules/angular/angular.js"></script>
+    <!-- <script src="./js/app.js"></script> -->
+    <script src="./js/controllers/TodomvcController.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body ng-app="todomvc">
+    <div ng-controller="mvcController" class="container">
+        <h1>Todos</h1>
+
+        <ul class="list-unstyled">
+            <li>
+                <form ng-submit="addTodo(newTodo)">
+                    <div class="input-group">
+                        <input type="text" ng-model="newTodo" class="form-control input-group-text" placeholder="Type todos" autofocus>
+                        <span class="input-group-append">
+                            <button class="btn btn-success" type="submit">Add</button>
+                        </span>
+                    </div>
+                </form>
+            </li>
+        </ul>
+
+        <ul ng-repeat="todo in todos | filter:statusFilter" class="list-unstyled">
+            <li class="todo-item">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <input type="checkbox" aria-label="..." ng-model="todo.completed">
+                    </span>
+                    <input type="text" class="form-control" aria-label="..." ng-model="todo.title">
+                    <div class="input-group-btn">
+                        <button class="btn btn-danger" ng-click="remove(todo.id)">Remove</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-default" ng-click="status='completed'">Completed</button>
+            <button type="button" class="btn btn-default" ng-click="status='active'">Active</button>
+            <button type="button" class="btn btn-default" ng-click="status=''">All</button>
+            <button type="button" class="btn btn-default" ng-click="clearCompleted()">
+                Clear Completed
+            </button>
+        </div>
+        <pre>{{todos | json}}</pre>
+    </div>
+</body>
+
+</html>

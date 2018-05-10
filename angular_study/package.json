@@ -1,0 +1,17 @@
+{
+  "name": "angular_study",
+  "version": "1.0.0",
+  "description": "Project for Angular Study",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "hi",
+    "start": "node server/app"
+  },
+  "author": "JSIM",
+  "license": "ISC"
+}
