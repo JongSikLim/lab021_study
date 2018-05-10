@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="main">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/controller/header.controller.js"></script>
+    <script src="./js/controller/filtering.controller.js"></script>
+    <script src="./js/service/infos.service.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div ng-controller="headerController">
+            <h1>{{comment}}</h1>
+        </div>
+        <div ng-controller="filtering">
+        <table class="table table-dark">
+            <thead>
+                <th>#</th>
+                <th ng-click="orderByStatus('id')">id</th>
+                <th ng-click="orderByStatus('name')">name</th>
+                <th ng-click="orderByStatus('age')">age</th>
+                <th>Function</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="info in infos | filter:statusFilter | orderBy: myOrderBy">
+                    <th></th>
+                    <td>{{info.id}}</td>
+                    <td>{{info.name}}</td>
+                    <td>{{info.age}}</td>
+                    <td>
+                        <button class="btn btn-danger" ng-click="delete(info.id)">삭제</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="input-group">
+            <button class="btn btn-default input-group-prepend" ng-click="statusSet('One')">One</button>
+            <button class="btn btn-default" ng-click="statusSet('Two')">Two</button>
+            <button class="btn btn-default " ng-click="statusSet('Three')">Three</button>
+            <span>Now Status: </span> <span>{{status}}</span>
+        </div>
+        <form ng-submit="post(name, age)">
+        <div class="input-group">
+            <input type="text" class="form-control" ng-model="name" placeholder="이름을 입력하세요...">
+            <input type="text" class="input-group-prepend form-control" ng-model="age" placeholder="나이를 입력하세요...">
+            <button class="input-group-append btn btn-success" type="submit">Post</button>
+        </div>
+    </form>
+    
+    </div>
+    </div>
+</body>
+
+</html>
