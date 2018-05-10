@@ -1,0 +1,20 @@
+{
+  "name": "angular_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "hi",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "angular",
+    "express"
+  ],
+  "author": "JSIM",
+  "license": "ISC"
+}
