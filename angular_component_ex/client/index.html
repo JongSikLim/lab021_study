@@ -12,13 +12,14 @@
     <script src="./component/footer/footer.component.js"></script>
     <script src="./component/multi-content/multi.component.js"></script>
     <script src="../node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
-    
+    <link rel="stylesheet" href="./style/main.css">
     <title>Document</title>
 </head>
 <body ng-app="main">
      <header></header>
-     <div ng-view></div>
-     <ui-view></ui-view>
-     <footer></footer>
+     <div class="content">
+        <ui-view></ui-view>
+        <footer></footer>
+    </div>
 </body>
 </html>
