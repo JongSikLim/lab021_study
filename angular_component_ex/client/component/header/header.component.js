@@ -1,7 +1,9 @@
 angular.module('main')
     .component('header',{
-        template: '{{$ctrl.comment}}',
+        templateUrl: './component/header/header.html',        
         controller: function(){
             this.comment = 'Header section';
-        }
+        },        
     })
+
+    

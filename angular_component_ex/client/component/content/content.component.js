@@ -1,7 +1,10 @@
 angular.module('main')
     .component('content',{
-        template: '{{$ctrl.comment}}',
+        templateUrl:'./component/content/content.component.html',
         controller: function(){
             this.comment = 'Content section';
+            console.log('on');
         }
     })
+
+    

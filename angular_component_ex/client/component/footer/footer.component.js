@@ -1,6 +1,6 @@
 angular.module('main')
     .component('footer',{
-        template: '{{$ctrl.comment}}',
+        templateUrl:'./component/footer/footer.component.html',
         controller: function(){
             this.comment = 'Footer section';
         }

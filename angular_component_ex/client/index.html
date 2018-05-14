@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/angular-route/angular-route.js"></script>
     <script src="./js/app.js"></script>
-    <script src="./component/header.component.js"></script>
-    <script src="./component/content.component.js"></script>
-    <script src="./component/footer.component.js"></script>
+    <script src="./component/header/header.component.js"></script>
+    <script src="./component/content/content.component.js"></script>
+    <script src="./component/footer/footer.component.js"></script>
+    <script src="./component/multi-content/multi.component.js"></script>
+    <script src="../node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
+    
     <title>Document</title>
 </head>
 <body ng-app="main">
      <header></header>
-     <content></content>
+     <div ng-view></div>
+     <ui-view></ui-view>
      <footer></footer>
 </body>
 </html>
