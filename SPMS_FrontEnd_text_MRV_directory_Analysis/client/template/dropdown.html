@@ -127,7 +127,8 @@
             <button data-toggle="collapse" data-target="#login-js">login-auth, token</button>
             <button data-toggle="collapse" data-target="#html-login-html">login-html, js</button>
             <button data-toggle="collapse" data-target="#api-1">API</button>            
-            <button data-toggle="collapse" data-target="#animation">Animation</button> 
+            <button data-toggle="collapse" data-target="#animation">Animation</button>
+            <button data-toggle="collapse" data-target="#handsontable">Handsontable</button> 
             <div class="html-des collapse" id="html">
                     <p>
                             <span class="subject">1. HTML 구조</span>
@@ -369,6 +370,27 @@
                     <br>3-5. <code>var order = getOrder('.panel, $('.leftDiv')[0]);</code> 코드를 실행한다. <span class="question"></span> 무엇에 쓰는고?
                 </p>
             </div>
+            <div class="html-des collapse" id="handsontable">
+                <p>
+                    <span class="subject">Handsontable library</span>
+                    <br>스프레드 시트를 html Dom에 표시해주는 라이브러리이다.
+                    <br>1.SPMS 소스에 적용되어 있는 옵션 
+                    <br>data - data grid(표)에 반영되는 초기 data source. (data grid 편집은 data source을 변경한다.) 배열, 배열 객체, 함수로 선언가능
+                    <br>2. colHeaders - col의 header부분에 표시될 텍스트 boolean 값으로 설정 가능하며 배열로 설정 가능하다. <code>['shipName', 'shipPrice']</code> (rowHeaders도 동일하다.)
+                    <br>3. columns - 특정 열에 대한 셀 속성 및 데이터 바인딩을 정의합니다. (이 옵션을 사용하면 고정 된 수의 열을 설정할 수 있다. starCols, minCols, maxCols 옵션은 무시됩니다.)
+                    <br>3-1. data in columns - 데이터의 정렬 순서를 지정한다 {data : index, 'keyName'}
+                    <br>3-2. validation - 셀 검증 과정에서 사용될 함수 또는 정규 표현식 (유효성 검사가 통과되면 true(콜백(true)) 실패시 false(콜백(false))가 리턴된다. 함수의 this는 cellProperties 객체를 가리킨다.)
+                    <br>4. maxRows, maxCols - 행열 최대치 설정값
+                    <br>5. stretchH - 선언된 테이블 너비가 모든 열 너비의 계산 된 합계와 다른 경우 열의 반응 방식을 정의합니다. (none - 짤림, last - 마지막열만 늘림, all - 모든 열을 균등하게 늘림)
+                    <br>6. renderAllRows - true 값을 주게 되면 handsontable의 가상 렌더링 메커니즘이 적용된다. (<span class="question"></span> 그게 먼지는 모르겟다.)
+                    <br>7. filters - 기본 제공 구성 요소 또는 API를 사용하여 테이블 데이터를 필터링 할 수 있습니다.
+                    <br>8. height - 그리드의 높이, 숫자 혹은 숫자를 리턴하는 콜백을 넣을 수 있다.
+                    <br>9. currnetRowClassName - 'currentRow' 값을 입력하면 해당 row에 클래스를 추가한다. 
+                    <br>10. cells - function(row, col, prop) 함수로 정의 가능 지정된 행, 열, 프로퍼티에 대한 셀 속성을 정의합니다.
+                    
+                </p>
+            </div>
         </div>
     </div>
 </div>
+
