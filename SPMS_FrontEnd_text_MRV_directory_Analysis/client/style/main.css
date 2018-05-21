@@ -1,0 +1,92 @@
+/** import 영역 **/
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+
+body{
+    background-color: black;
+    height: 100vh;
+    font-family: 'Jeju Gothic', sans-serif;   
+}
+span.des{
+    font-size: 16px;
+    color: white;
+}
+div.dl-depth-1{
+    font-size: 50px;
+    color:rgb(253, 116, 196);
+}
+div.dl-depth-1>div.dl-depth-2{
+    margin-left: 20px;
+    font-size: 25px;
+    color: #a3a2ec;
+    
+}
+div.dl-depth-1>div.dl-depth-2>div.dl-depth-3{
+    margin-left: 30px;
+    font-size: 20px;
+    color: rgb(164, 245, 164);
+    
+}
+div.dl-depth-1>div.dl-depth-2>div.dl-depth-3>span.des{
+    font-size: 16px;
+    color: white;
+}
+div.dl-depth-1>div.dl-depth-2>div.dl-depth-3>div.dl-depth-4{
+    margin-left:  30px;
+    font-size : 19px;
+    color: #fff9a0;
+}
+.display-none{
+    display: none;
+}
+div.dd-container{
+    display: -webkit-flex;
+    display: flex;
+    
+}
+div.dd-container>div.left-section{
+    -webkit-flex: 1;
+    flex: 1;
+    
+}
+div.dd-container>div.right-section{
+    -webkit-flex: 1;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    margin-top: 5vh;
+    
+}
+div.dd-container>div.right-section>div.html-des{
+    color:rgb(185, 185, 185);
+}
+pre,xmp{
+    display: inline;
+    color:white;
+    font-size: 1rem;
+    padding: 0px;
+    margin: 0px;
+}
+span.guess{
+    color: rgb(151, 151, 255);
+    font-weight: 900;    
+}
+span.question{
+    color:red;
+    font-weight: 900;
+}
+span.subject{
+    font-size: 140%;
+    font-weight: 900;    
+}
+div#token-code{
+    margin-top: 0px;
+    padding-top: 0px;
+}
+span#subsubject{
+    font-size: 100%;
+    font-weight: 600;
+    color:white;
+}
+.popover-body{
+    background-color: black;
+}

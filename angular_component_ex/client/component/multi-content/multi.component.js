@@ -14,7 +14,8 @@ angular.module('main')
         controller: function MultiController(){            
             this.comment = 'inner Ctrl comment';
             console.log('hihihihi');
-        }
+        },
+        style
     });
 
 

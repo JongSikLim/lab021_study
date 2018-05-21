@@ -1,0 +1,18 @@
+{
+  "name": "spms_frontend_text_mrv_directory_analysis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server"
+  },
+  "author": "JSIM",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.9",
+    "directory-tree": "^2.1.0",
+    "express": "^4.16.3",
+    "live-server": "^1.2.0"
+  }
+}
