@@ -3,11 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="./server/server.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>    
+    <script src="./client/js/app.module.js"></script>
+    <script src="./client/js/app-routing.js"></script>
+    <script src="./client/controller/report.controller.js"></script>
+    <link rel="stylesheet" href="client/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/CSSPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/easing/EasePack.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenLite.min.js"></script>
     <title>Document</title>
 </head>
-<body>
-    <h1> Hi everyone! </h1>
+<body ng-app="mrv">    
+    <ui-view></ui-view>    
 </body>
 </html>

@@ -347,8 +347,9 @@
                     <button type="button" class="btn btn-secondary" data-toggle="popover" data-content="<img src='{{url.btn_up}}'>">
                             소스코드 보기
                     </button>
-                    <br>1-1. srcPanel : 부모 요소  |  targetPanel : 타겟 요소 (btn-up시에는 prev(), btn-down시에는 next())
-                    <br>1-2. srcHeight : srcPanel.outerHeight() -> 바깥라인의 높이 값을 표현 | targetHeight 동일
+                    <br>1-1. monitoring.js 에 선언되어 있는 TweenMax 라이브러리를 이용한 애니메이션에 설명이다.
+                    <br>1-2. srcPanel : 부모 요소  |  targetPanel : 타겟 요소 (btn-up시에는 prev(), btn-down시에는 next())
+                    <br>1-3. srcHeight : srcPanel.outerHeight() -> 바깥라인의 높이 값을 표현 | targetHeight 동일
                 </p>
                 <p>
                    <span class="subject">2. tweenLite - GSAP Library</span>
@@ -360,7 +361,7 @@
                    </div>
                    <br> 2-4. 애니메이션이 끝나고 콜백함수가 선언이 되어있는데, 조건(타겟이 있을경우 -> 이벤트가 실행될 경우)
                    <br> 2-4-1. targetPanel.before (btn-up 시에)  | targetPanel.after(btn-down 시에) 처리를 통해서 dom을 수정한다.
-                   <br> 2-5. srcPanel.css | targetPanel.css 에서 'top' 속성을 '0px'로 재 변경한다. 이에 대한 이유를 3에서 설명한다.                   
+                   <br> 2-5. srcPanel.css | targetPanel.css 에서 'top' 속성을 '0px'로 재 변경한다. 이에 대한 이유를 3에서 설명한다.
                 </p>
                 <p>
                     <span class="subject">3. animation flow</span>

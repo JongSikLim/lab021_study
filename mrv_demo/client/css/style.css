@@ -1,0 +1,59 @@
+/*
+template/report.html---------------------------------------------------------
+*/
+html, body, div, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ul, ol, li, table, tr, th, td 등등{
+  margin: 0;
+  padding: 0;
+}
+
+div.root-container{background-color: rgb(190, 190, 190); color:white; height: 100vh;}
+div.content-container{
+    display: -webkit-flex;
+    display: flex;
+    height: 85vh;
+}
+div.header{
+    background-color: rgb(97, 0, 0);
+    height: 5vh;
+}
+div.sidebar{
+    background-color: rgb(2, 77, 87);
+    -webkit-flex: 2;
+    flex: 2;
+    
+}
+div.content{
+    background-color: rgb(29, 61, 2);    
+    -webkit-flex: 8;
+    flex: 8;
+    overflow-x: hidden;
+    overflow-y : auto;
+    
+}
+div.footer{background-color: rgb(53, 36, 0); height: 10vh;}
+
+
+/*
+view/content.html------------------------------------------------------------------------------------------------------------------
+*/
+div.box-container{
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+}
+div#box{
+    margin: 5px;
+    width: auto;
+    height: 20vh;
+    background-color: white;
+    color: rgb(87, 87, 87);   
+    overflow-y:hidden; 
+    /* 
+        flex: 1 1 calc(100/val - val * margin *2)
+    */
+}
+div.content-box>h1{display: inline-block;}
+div.button-group{    
+    float: right;
+    padding: 10px;
+}
