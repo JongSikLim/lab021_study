@@ -40,6 +40,7 @@ div.box-container{
     display: -webkit-flex;
     display: flex;
     flex-flow: row wrap;
+    z-index: 1;
 }
 div#box{
     margin: 5px;
@@ -56,4 +57,27 @@ div.content-box>h1{display: inline-block;}
 div.button-group{    
     float: right;
     padding: 10px;
+}
+/*
+    view/content.html/checkbox-group-popup------------------------------------------------------------------------------------------------------------------
+*/
+div.checkbox-group{    
+    position: fixed;
+    right: -10vw;
+    top: 5vh;
+    width: 10vw;    
+    background-color: rgb(78, 78, 78);
+    z-index: 2;
+}
+div.input-box{
+    width: 100%;    
+}
+div.content-box>div.input-box>span.placeholder{
+    margin-left: 5%;
+    width: 20%;
+    margin-right: 5%;
+    font-size: 70%;
+}
+div.content-box>div.input-box>input.box-input-field{
+    width: 70%;
 }

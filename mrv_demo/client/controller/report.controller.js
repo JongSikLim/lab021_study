@@ -3,6 +3,7 @@ app.controller('report', ($scope) => {
     $scope.hi = 'hi';
 });
 app.controller('content', ($scope) => {
+    var dataTableState = false;
     $scope.col_per_row = 0;
     $scope.$watch('col_per_row', function (newValue, oldValue) {
         if (newValue >= 10 || newValue <= 0) return;
@@ -16,7 +17,8 @@ app.controller('content', ($scope) => {
      */
     })
 
-    $('.btn-up').on('click', function (event) {
+    $(document).on('click','.btn-up', function (event) {
+        console.log('up-event');
         var nowPanel = $(this).parents('.content-box');
         var targetPanel = nowPanel.prev('.content-box');
 
@@ -51,7 +53,8 @@ app.controller('content', ($scope) => {
         });
     });
 
-    $('.btn-down').on('click', function (event) {
+    $(document).on('click','.btn-down', function (event) {
+        console.log('down-event');
         var nowPanel = $(this).parents('.content-box');
         var targetPanel = nowPanel.next('.content-box');
 
@@ -79,4 +82,39 @@ app.controller('content', ($scope) => {
             }
         });
     });
+
+    
+    $scope.boxShowState={
+        box1: true,
+        box2: true,
+        box3: true,
+        box4: true,
+        box5: true,
+        box6: true,
+        box7: true,
+        box8: true,
+        box9: true,
+        box10: true,
+        box11: true
+    }
+    $(document).on('click','button.checkbox-group-show', function(){
+        // false : none, true : show
+        // if(!dataTableState){$('div.checkbox-group').css('right', '0');dataTableState=!dataTableState;}
+        // else {$('div.checkbox-group').css('right', '-10vw');dataTableState=!dataTableState;}        
+        if(!dataTableState){
+            $('div.checkbox-group').animate({
+                right: "0vw"
+            });
+            dataTableState=!dataTableState;
+        }
+        else {
+            $('div.checkbox-group').animate({
+                right: "-10vw"
+            });
+            dataTableState=!dataTableState;
+        }
+    });
+        
+    
+    console.log($scope.boxShowState.box1);
 })
