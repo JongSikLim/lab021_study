@@ -57,7 +57,7 @@ app.controller('content', ($scope) => {
         console.log('down-event');
         var nowPanel = $(this).parents('.content-box');
         var targetPanel = nowPanel.next('.content-box');
-
+        
         var nowHeight = nowPanel.outerHeight();
         var targetHeight = targetPanel.outerHeight();
         if (targetPanel[0] === undefined) return;
