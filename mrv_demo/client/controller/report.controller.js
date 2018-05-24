@@ -18,14 +18,13 @@ app.controller('content', ($scope) => {
     })
 
     $(document).on('click','.btn-up', function (event) {
-        console.log('up-event');
+        
         var nowPanel = $(this).parents('.content-box');
         var targetPanel = nowPanel.prev('.content-box');
-
+        while(targetPanel.hasClass("ng-hide")) targetPanel = targetPanel.prev('.content-box');
         var nowHeight = nowPanel.outerHeight();
-        var targetHeight = targetPanel.outerHeight();
-        console.log(nowPanel);
-        console.log(targetPanel);
+        var targetHeight = targetPanel.outerHeight();        
+        
         if (targetPanel[0] === undefined) return;
 
         TweenLite.fromTo(nowPanel, 0.3, {
@@ -40,7 +39,7 @@ app.controller('content', ($scope) => {
             y: nowHeight + 7,
             onComplete: function () {
                 if (targetPanel[0]) {
-                    console.log('animation done!');
+                    
 
                     nowPanel.after(targetPanel);
                     //$(nowPanel).remove();
@@ -54,10 +53,11 @@ app.controller('content', ($scope) => {
     });
 
     $(document).on('click','.btn-down', function (event) {
-        console.log('down-event');
+        
         var nowPanel = $(this).parents('.content-box');
         var targetPanel = nowPanel.next('.content-box');
-        
+        while(targetPanel.hasClass("ng-hide")) targetPanel = targetPanel.next('.content-box');
+        console.log(targetPanel);
         var nowHeight = nowPanel.outerHeight();
         var targetHeight = targetPanel.outerHeight();
         if (targetPanel[0] === undefined) return;
