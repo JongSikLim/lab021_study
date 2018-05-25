@@ -1,0 +1,23 @@
+{
+  "name": "mrv_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server",
+  "dependencies": {
+    "angular": "^1.6.9",
+    "angular-route": "^1.5.11",
+    "electron": "^2.0.2",
+    "express": "^4.16.3",
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm test",
+    "start": "node server/server"
+  },
+  "keywords": [
+    "mrv"
+  ],
+  "author": "JSIM",
+  "license": "ISC"
+}
