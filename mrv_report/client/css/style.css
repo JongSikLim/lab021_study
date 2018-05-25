@@ -1,0 +1,41 @@
+/*index.html--------------------------------------------------*/
+html, body, div, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ul, ol, li, table, tr, th, td 등등{
+    margin: 0;
+    padding: 0;
+  }
+
+div.root-container>div.content-container{
+    background-color: #f8f9fa;
+    display: -webkit-flex;
+    display: flex;
+}
+
+
+/*nav.html----------------------------------------------------*/ 
+.btn{
+    border: none !important;
+}
+.btn-event{
+    font-weight: 600;
+    color : rgb(100, 100, 100);
+}
+
+
+.btn-event.active{
+    color: #1171d1 !important;    
+    background-color: #fff !important;    
+    border-bottom: 2px solid #1171d1 !important;
+}
+
+/*content.html----------------------------------------------------*/ 
+.btn-sector{
+    margin-bottom: 5px;
+}
+.btn-add-event{
+    font-weight: 600;
+    font-size: 70%;
+}
+div.alert-event{
+    font-size: 80%;
+    color : black
+}
