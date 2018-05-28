@@ -3,15 +3,20 @@ html, body, div, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ul, ol, li, table, tr, t
     margin: 0;
     padding: 0;
   }
-
-div.root-container>div.content-container{
+body{
     background-color: #f8f9fa;
+}
+
+div.root-container>div.content-container{    
     display: -webkit-flex;
     display: flex;
 }
 
 
 /*nav.html----------------------------------------------------*/ 
+.nav-content{
+    background-color: white;
+}
 .btn{
     border: none !important;
 }
@@ -19,8 +24,6 @@ div.root-container>div.content-container{
     font-weight: 600;
     color : rgb(100, 100, 100);
 }
-
-
 .btn-event.active{
     color: #1171d1 !important;    
     background-color: #fff !important;    
@@ -34,8 +37,31 @@ div.root-container>div.content-container{
 .btn-add-event{
     font-weight: 600;
     font-size: 70%;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 div.alert-event{
     font-size: 80%;
     color : black
+}
+table.table{
+    background-color: white;
+    font-size: 80%;
+    
+} 
+.table,thead ,.table tr, tbody{
+    border: 2px solid #f8f9fa;
+}
+span.redSign{
+    color: red;
+}
+span.greenSign{
+    color: green;
+}
+td.col-sign{
+    padding-left: 21px;
+    /* font-size: 200%; */
+}
+span.meneuvering{
+    color: white;
 }

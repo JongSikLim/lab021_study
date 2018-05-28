@@ -6,4 +6,9 @@ app.config(function($stateProvider, $urlRouterProvider){
             url: '/',
             component: 'content'
         })
+        .state('event',{
+            url: '/',
+            component: 'event'
+        })
+
 });
