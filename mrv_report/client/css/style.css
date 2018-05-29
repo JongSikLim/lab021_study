@@ -13,14 +13,14 @@ div.root-container>div.content-container{
 }
 
 
-/*nav.html----------------------------------------------------*/ 
+/*nav.html, returnNav.html----------------------------------------------------*/ 
 .nav-content{
     background-color: white;
 }
 .btn{
     border: none !important;
 }
-.btn-event{
+.btn-event, .btn-return{
     font-weight: 600;
     color : rgb(100, 100, 100);
 }

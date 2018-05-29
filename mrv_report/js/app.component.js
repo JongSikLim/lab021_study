@@ -9,6 +9,16 @@ app.component('nav',{
         })
     }
 });
+app.component('returnNav', {
+    templateUrl: 'client/component/layout/returnNav.html',
+    controller: function($state, $rootScope, $scope){
+        $scope.eventState = $rootScope.eventState;
+        $('button.btn-return').on('click', function(){                        
+            $state.go('main');            
+            $rootScope.eventState = false;
+        })
+    }
+})
 app.component('sidebar',{
     templateUrl: 'client/component/layout/sidebar.html',
     controller: function(){
@@ -25,10 +35,12 @@ app.component('content',{
         $('tr').on('click', function(event){
             var str = event.currentTarget.children[0].innerText;            
             $rootScope.nowEvent = str;
+            $rootScope.eventState = true;
             $state.go('event');
         });
     }
 });
+
 app.component('footer',{
     templateUrl: 'client/component/layout/footer.html',
     controller: function(){

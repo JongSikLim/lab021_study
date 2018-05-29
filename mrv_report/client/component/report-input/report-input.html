@@ -1,6 +1,5 @@
 <div class="report-input" ng-controller="reportController">
-    <h3>{{nowEvent}}</h3>
-    
-    <position-input-box ng-if="position"></position-input-box>
+    <h3>{{title}}</h3>    
+    <position-input-box ng-if="input_status.position"></position-input-box>
     <consumption-input-box></consumption-input-box>
 </div>
