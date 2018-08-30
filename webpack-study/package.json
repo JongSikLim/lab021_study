@@ -1,0 +1,23 @@
+{
+  "name": "modern-nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js --exec babel-node",
+    "build": "webpack --mode development"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.56",
+    "@babel/node": "^7.0.0-beta.56",
+    "@babel/preset-env": "^7.0.0-beta.56",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.16.4",
+    "webpack-cli": "^3.1.0",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "angular": "^1.7.2",
+    "express": "^4.16.3"
+  }
+}

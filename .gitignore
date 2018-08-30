@@ -13,6 +13,9 @@
 /node_modules
 /bower_components
 
+**/node_modules
+
+
 # IDEs and editors
 /.idea
 
@@ -33,6 +36,7 @@ testem.log
 .DS_Store
 
 
+
 # End of https://www.gitignore.io/api/angular
 angular_component_ex/node_modules
 angular_http_ex/node_modules
@@ -42,3 +46,4 @@ SPMS_FrontEnd_text_MRV_directory_Analysis/node_modules
 mrv_demo/node_modules
 mrv_report/node_modules
 electron_demo/electron-quick-start
+
